@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+/*font-family: 'Raleway', sans-serif;*/
+/*font-family: 'Roboto', sans-serif;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: #1e1e1e10;
+    font-size: 100%;
+    overflow-x: hidden;
+
+}
+
+#purpbg {    
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    z-index: -1;
+}
+
+#navbar {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#logo {
+    height: 60px;
+}
+
+#textnav {
+    display: flex;
+    color: #603567;
+    gap: 200px;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.navtex {
+    color: #603567;
+    position: relative;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.navtex::after {
+    content: "";
+    position: absolute;
+    background-color: #603567;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.8s;
+}
+
+.navtex:hover::after {
+    width: 100%;
+}
+
+#buttlog {
+    width: 100px;
+    height: 40px;
+    background-color: #ffffff00;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+header {
+    height: 100vh;
+}
+
+#main {
+
+}
+
+#textmexedor {
+    margin-top: -150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.textmain {
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    color: #603567;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#conect {
+    width: 170px;
+    height: 45px;
+    margin-top: 20px;
+    background: linear-gradient(94.43deg, #5E33F5 8.76%, #A639B9 93.6%);
+    border-radius: 48px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #fffefef4;
+    border: #1e1e1e00;
+    
+}
+
+#purpilu {
+    width: 360px;
+    position: relative;
+    left: 240px;
+    top: 340px;
+}
+
+#redilu {
+    width: 360px;
+    position: relative;
+    left: 700px;
+}
