@@ -1,7 +1,16 @@
 <?php
     require('connection.php');
     include('functions.php');
-    include('verifyCompanies.php');
+    
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+
+    if(!isset($_SESSION['companie']))
+    {
+        die("Acesso negado! <a href=\"loginCompanies.php\">Conecte-se aqui!<a>");
+    }
 
     $sqlQuery = "SELECT companieName, linkImage FROM companies";
     $allCompanies = $mysqli->query($sqlQuery);
@@ -23,6 +32,9 @@
     
     <main>
         <header>
+            <a href="index.html">
+                <img src="../img/logocomunit.png" alt="communitIcon">
+            </a>
             <nav>
                 <ul>
                     <li>

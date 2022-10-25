@@ -2,6 +2,15 @@
     require('connection.php');
     include('functions.php');
 
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
+
+    if(isset($_SESSION['companie']))
+    {
+        header("Location: showCompanies.php");
+    }
     if(isset($_POST['code']))
     {
         if(strlen($_POST['code'] == 0 || strlen($_POST['code'] == "")))
@@ -64,8 +73,11 @@
                 </div>
                 <div>
                     <button type="submit">
-                        Conectar-se                    
-                    </button>
+                        Conecte-se                    
+                    </button><br>
+                    <p>
+                        É um usúario administrador?<a href="loginAdm.php">Acesse aqui!</a>
+                    </p>
                 </div>
             </form>
         </section>

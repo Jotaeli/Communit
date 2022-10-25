@@ -2,8 +2,18 @@
   require('connection.php');
   include('functions.php');
 
+  if(!isset($_SESSION))
+  {
+    session_start();
+  }
+
+  if(!isset($_SESSION['adm']))
+  {
+    die("Você não está conectado. <a href=\"loginAdm.php\">Conecte-se aqui!</a>");
+  }
+
   if(isset($_POST['companieName']) || isset($_POST['atuationArea']) || 
-  isset($_POST['localization']) || isset($_POST['cnpj']))
+    isset($_POST['localization']) || isset($_POST['cnpj']))
   {
       $companieName = $_POST['companieName'];
       $atuationArea = $_POST['atuationArea'];
@@ -91,9 +101,9 @@
             </p>
           </div>
           <div>
-            <a href="showCompanies.php">
+            <a href="admPage.php">
               <button type="submit">
-                Cadastrar
+                  Cadastrar
               </button>
             </a>
           </div>

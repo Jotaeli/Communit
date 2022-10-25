@@ -1,5 +1,5 @@
 <?php
-
+    
     // Code generator for companies
     function codeGenerator($size = 20)
     {
