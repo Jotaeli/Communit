@@ -66,38 +66,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" type="text/css" href="logadm.css">
   <title>Adm login</title>
 </head>
 <body>
   <main>
     <header>
       <h1 class="title-1">
-        <a href="index.html">
-          <img src="../img/logocomunit.png" alt="comunit">
+        <a href="../Landing Page/deflp.html">
+          <img id="logo" src="../logonav.png" alt="comunit">
       </a>
       </h1>
     </header>
     <section>
-      <form method="post" action="" class="form">
-        <div class="form_camp">
-          <label for="user">
-            Login:
-          </label>
-          <input type="text" name="user" id="user" required>
+        <div class="cardla">
+            <h1>Login Admin</h1>
+            <form method="post" action="" class="form">
+                <div class="form_camp">
+                <label for="user">
+                    Login:
+                </label>
+                <input type="text" name="user" id="user" required>
+                </div>
+                <div class="form_camp">
+                <label for="pass">
+                    Senha:
+                </label>
+                <input type="password" name="pass" id="pass" required>
+                </div>
+                <div class="button-submit">
+                <button id="buttla" type="submit" name="submit" value="submit">
+                    Entrar
+                </button>
+                </div>
+            </form>
         </div>
-        <div class="form_camp">
-          <label for="pass">
-            Senha:
-          </label>
-          <input type="password" name="pass" id="pass" required>
-        </div>
-        <div class="button-submit">
-          <button type="submit" name="submit" value="submit">
-            Entrar
-          </button>
-        </div>
-      </form>
     </section>
   </main>
 </body>

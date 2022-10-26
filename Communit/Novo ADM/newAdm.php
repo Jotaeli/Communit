@@ -29,33 +29,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="newadm.css">
     <title>Novo Admin</title>
 </head>
 <body>
+    <img id="logo" src="../logonav.png">
     <main>
-        <header>
-
-        </header>
         <section>
-            <form action="" method="post">
-                <div>
-                    <label for="userName">
-                        Nome do usúario:
-                    </label>
-                    <input type="text" name="userName" id="userName" required>
-                </div>
-                <div>
-                    <label for="userPass">
-                        Senha:
-                    </label>
-                    <input type="password" name="userPass" id="userPass" required>
-                </div>
-                <div>
-                    <button type="submit">
-                        Criar
-                    </button>
-                </div>
-            </form>
+            <div class="cardna">
+                <h1>Novo Admin</h1>
+                <form action="" method="post">
+                    <div class="blabla">
+                        <label for="userName">
+                            Nome do usúario:
+                        </label>
+                        <input type="text" name="userName" id="userName" required>
+                    </div>
+                    <div class="blabla">
+                        <label for="userPass">
+                            Senha:
+                        </label>
+                        <input type="password" name="userPass" id="userPass" required>
+                    </div>
+                    <div class="blabla">
+                        <button id="buttna" type="submit">
+                            Criar
+                        </button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 </body>

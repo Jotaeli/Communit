@@ -12,11 +12,18 @@
     text-decoration: none;
 }
 
+header {
+    
+}
+
 body {
-    background-color: #1e1e1e10;
+    background-color: #1e1e1e00;
     font-size: 100%;
     overflow-x: hidden;
-
+    background-image: url(bg.svg);
+    background-position: top right;
+    background-size: 1200px;
+    background-repeat: no-repeat;
 }
 
 #bg {
@@ -48,14 +55,14 @@ body {
 
 #textnav {
     display: flex;
-    color: #603567;
+    color: #121212;
     gap: 200px;
     font-size: 16px;
     line-height: 28px;
 }
 
 .navtex {
-    color: #603567;
+    color: #131313;
     position: relative;
     text-decoration: none;
     padding: 0 10px;
@@ -64,7 +71,7 @@ body {
 .navtex::after {
     content: "";
     position: absolute;
-    background-color: #603567;
+    background-color: #121212;
     height: 3px;
     width: 0;
     left: 0;
@@ -80,8 +87,8 @@ body {
     width: 100px;
     height: 40px;
     background-color: #ffffff00;
-    border: 1px solid #603567;
-    color: #603567;
+    border: 1px solid #141414;
+    color: #141414;
     border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
@@ -96,7 +103,7 @@ header {
 }
 
 #textmexedor {
-    margin-top: -150px;
+    margin-top: -160px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,7 +135,7 @@ header {
 #purpilu {
     width: 360px;
     position: relative;
-    left: 240px;
+    left: 140px;
     top: 340px;
 }
 
@@ -148,6 +155,8 @@ header {
     display: flex;
     font-size: 40px;
     justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #603567;
 }
 
 .cards {
@@ -222,6 +231,12 @@ header {
     justify-content: space-around;
 }
 
+#titlesec3 {
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: #603567;
+}
+
 #sec3things {
     display: flex;
     flex-direction: row;
@@ -244,7 +259,7 @@ header {
     font-family: 'Roboto', sans-serif;
     color: aliceblue;
     border: #3c383800;
-    background: linear-gradient(266.86deg, rgba(255, 213, 0, 0.89) 7.45%, rgba(193, 174, 0, 0.89) 101.93%);
+    background: linear-gradient(94.43deg, #cb00f9 8.76%, #ea22cc 93.6%);
     border-radius: 40px;
     cursor: pointer;
 }
@@ -254,10 +269,6 @@ header {
     flex-direction: column;
     align-items: center;
     color: #422034d2;
-}
-
-#titlesec3 {
-    font-size: 40px;
 }
 
 #ilustsec3 {

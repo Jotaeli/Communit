@@ -52,7 +52,7 @@ section {
     position: absolute;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 34px;
-    color: #81295d;
+    color: #603567;
     top: 30%;
     left: 38px;
     transform: translateY(-60%);
@@ -77,12 +77,12 @@ input:focus + label{
     line-height: 0px;
     margin-left: 37px;
     text-decoration-line: underline;
-    color: #632b4c;
+    color: #603567;
 }
 
 #textadmin {
     font-family: 'Roboto', sans-serif;
-    color: #632b4c;
+    color: #603567;
     margin-top: 50px;
     font-size: 32px;
 }

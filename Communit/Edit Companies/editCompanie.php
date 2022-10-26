@@ -37,37 +37,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="editemp.css">
     <title>Edição de Empresas</title>
 </head>
 <body>
+    <img id="logo" src="../logonav.png">
     <main>
         <section>
-            <form action="" method="post">
-                <label for="name">
-                    Nome
-                </label>
-                <input type="text" name="name" id="name" value="<?= $selectCompanie['companieName']; ?>"><br>
-                <label for="cnpj">
-                    CNPJ
-                </label>
-                <input type="text" name="cnpj" id="cnpj" value="<?= $selectCompanie['cnpj']; ?>"><br>
-                <label for="atuationArea">
-                    Área de atuação
-                </label>
-                <input type="text" name="atuationArea" id="atuationArea" value="<?= $selectCompanie['atuationArea']; ?>"><br>
-                <label for="localization">
-                    Localização
-                </label>
-                <input type="text" name="localization" id="localization" value="<?= $selectCompanie['localization']; ?>"><br>
-                <label for="linkImage">
-                    Logo da empresa
-                </label>
-                <input type="text" name="linkImage" id="linkImage" value="<?= $selectCompanie['linkImage']; ?>"><br>
-                <button type="submit" name="submit" value="submit">
-                    Editar
-                </button>
-                </section>
-            </form>
+            <div class="carddit">
+                <h1>Edição</h1>
+                <form action="" method="post">
+                    <div class="inputBox">
+                        <label for="name">
+                            Nome
+                        </label>
+                        <input type="text" name="name" id="name" value="<?= $selectCompanie['companieName']; ?>"><br>
+                    </div>
+                    <div class="inputBox">
+                        <label for="cnpj">
+                            CNPJ
+                        </label>
+                        <input type="text" name="cnpj" id="cnpj" value="<?= $selectCompanie['cnpj']; ?>"><br>
+                    </div>
+                    <div class="inputBox">
+                        <label for="atuationArea">
+                            Área de atuação
+                        </label>
+                        <input type="text" name="atuationArea" id="atuationArea" value="<?= $selectCompanie['atuationArea']; ?>"><br>
+                    </div>
+                    <div class="inputBox">
+                        <label for="localization">
+                            Localização
+                        </label>
+                        <input type="text" name="localization" id="localization" value="<?= $selectCompanie['localization']; ?>"><br>
+                    </div>
+                    <div class="inputBox">
+                        <label for="linkImage">
+                            Logo da empresa
+                        </label>
+                        <input type="text" name="linkImage" id="linkImage" value="<?= $selectCompanie['linkImage']; ?>"><br>
+                    </div>
+                    <button id="edit" type="submit" name="submit" value="submit">
+                        Editar
+                    </button>
+                </form>
+            </div>   
+        </section>
     </main>
 </body>
 </html>
