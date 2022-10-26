@@ -26,31 +26,29 @@
     <title>
         Empresas online
     </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sc.css">
 </head>
 <body>
     
     <main>
         <header>
-            <a href="index.html">
-                <img src="../img/logocomunit.png" alt="communitIcon">
-            </a>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">
-                            Menu
-                        </a>
-                    </li>
-                    <li>
-                        <a href="logout.php">
-                            Desconectar-se
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div id="navbar">
+                <a href="../Landing Page/deflp.html">
+                    <img id="logo" src="../logonav.png" alt="communitIcon">
+                </a>
+                <img src="../ADM Page/burguer.svg">
+            </div>
         </header>
         <section>
+            <h1>Setores online</h1>
+            <div id="cards">
+                <div id="card">
+                    <img id="logoemp" src="logotb.png">
+                    <p id="nameemp">Nomeemp</p>
+                    <button id="buttemp" >Conversar</button>
+                </div>
+            </div>
+            
             <?php
                 foreach($allCompanies as $info)
                 {
@@ -62,9 +60,6 @@
             ?>
         </section>
         <footer>
-                <p>
-                    Direitos reservados
-                </p>
         </footer>
     </main>
 </body>

@@ -51,43 +51,48 @@
             <?php
                 foreach($allcompanies as $key => $companie)
                 {
-                    echo "
+                    echo    "
                     <div>
-                        <h3>
-                        <img src=\"   \" alt=\" logo aleatória \">
-                        " . $companie['1'] . "
-                        <h3>
-                        <a href='editCompanie.php?id=". $companie['0'] ."'>
-                        <img src='#' alt='img do lápis'>
+                        <div id="nago">
+                            <h3>
+                            <img id="logoal" src="tb.png" alt=\" logo aleatória \">
+                            <p id="comp1">" . $companie['1'] . "</p>
+                            <h3>
+                        </div>
+                        <a id="pencil" href='editCompanie.php?id=". $companie['0'] ."'>
+                        <img src="editpen.png" alt='img do lápis'>
                         </a>
-                        <table>
-                            <tr>
-                                <th>
-                                    Área de Atuação:
-                                </th>
-                                <td>
-                                ".$companie['3']."
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    CNPJ:
-                                </th>
-                                <td>
-                                    ".$companie['2']."
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    Localização: 
-                                </th>
-                                <td>
-                                    ".$companie['4']."
-                                </td>
-                            </tr>
-                        </table>
+                        <div style="overflow-x: auto;">
+                            <table>
+                                <tr>
+                                    <th>
+                                        Área de Atuação:
+                                    </th>
+                                    <td>
+                                    ".$companie['3']."
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        CNPJ:
+                                    </th>
+                                    <td>
+                                        ".$companie['2']."
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Localização: 
+                                    </th>
+                                    <td>
+                                        ".$companie['4']."
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                         <hr>
-                    </div>";
+                    </div>
+                            ";
                 }
             ?>
         </section>
