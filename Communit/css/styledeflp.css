@@ -1,4 +1,4 @@
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /*font-family: 'Montserrat', sans-serif;*/
@@ -20,14 +20,14 @@ body {
     background-color: #1e1e1e00;
     font-size: 100%;
     overflow-x: hidden;
-    background-image: url(bg.svg);
-    background-position: top right;
-    background-size: 1200px;
+    background-image: url(../img/bgprp.svg);
+    background-position: cover;
+    background-size: 200vh;
     background-repeat: no-repeat;
 }
 
 #bg {
-    background-image: url('bgpurp.svg');
+    background-image: url('bgprp.svg');
     background-position: right top;
 }
 
@@ -62,7 +62,7 @@ body {
 }
 
 .navtex {
-    color: #131313;
+    color: #252525;
     position: relative;
     text-decoration: none;
     padding: 0 10px;
@@ -71,12 +71,12 @@ body {
 .navtex::after {
     content: "";
     position: absolute;
-    background-color: #121212;
+    background-color: #252525;
     height: 3px;
     width: 0;
     left: 0;
     bottom: -10px;
-    transition: 0.8s;
+    transition: 0.5s;
 }
 
 .navtex:hover::after {
@@ -99,10 +99,14 @@ header {
 }
 
 #main {
-
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 800px;
 }
 
 #textmexedor {
+    width: 550px;
     margin-top: -160px;
     display: flex;
     justify-content: center;
@@ -132,17 +136,26 @@ header {
     
 }
 
-#purpilu {
-    width: 360px;
-    position: relative;
-    left: 140px;
-    top: 340px;
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
 
-#redilu {
-    width: 360px;
-    position: relative;
-    left: 700px;
+#imgright {
+    align-self: center;
+    margin-top: -160px;
+}
+
+#purpilu {
+    width: 480px;
+    animation: float 6s ease-in-out infinite;
 }
 
 .section2 {
@@ -229,6 +242,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 80px;
 }
 
 #titlesec3 {
@@ -274,3 +288,32 @@ header {
 #ilustsec3 {
     width: 400px;
 }
+
+#foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 170px;
+    border-top: 1px solid rgba(51, 51, 51, 0.15);
+}
+
+#foot h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(66, 66, 66);
+}
+
+#foot p {
+    font-family: 'Raleway', sans-serif;
+    color: #777777;
+}
+
+.textfoot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
