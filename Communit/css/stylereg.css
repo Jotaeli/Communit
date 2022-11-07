@@ -70,7 +70,7 @@ section {
     pointer-events: none;
     font-size: 1em;
 }
-input:focus + .labeltext,
+input:valid + .labeltext,
 input:focus + .labeltext{
     font-size: 13px;
     top: 0;
