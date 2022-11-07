@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="chat.css">
+    <title>Comunit</title>
+</head>
+<body>
+    <div id="chat">
+        <header class="head">
+            <img src="">
+            <p>Trocabyte</p>
+        </header>
+        <section class="message">
+            <div class="msg">
+
+            </div>
+        </section>
+        <section class="send">
+            <form action="" method="POST">
+                <input type="text" name="outgoingId" value="<?= $_SESSION['companie']; ?>">
+                <input type="text" name="outgoingId" value="<?= $userId; ?>">
+                <input type="text" name="outgoingId" name="messages" placeholder="insira sua mensagem aqui...">
+                <button><img src="../img/seta.png" alt="" id="arrow"></button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

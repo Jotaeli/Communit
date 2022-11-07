@@ -1,7 +1,7 @@
 <?php
     require __DIR__ . "/config.php";
     include __DIR__ . "/functions.php";
-    include __DIR__ . "/companiesForm.php";
+    include __DIR__ . "/loginCompaniesForm.php";
 
     if(!isset($_SESSION))
     {
