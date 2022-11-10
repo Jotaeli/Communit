@@ -42,6 +42,9 @@
                 <option value="Assistência Técnica">
                   Assistência técnica
                 </option>
+                <option value="Venda de Smartphone">
+                  Venda de smartphones
+                </option>
                 <option value="Nenhuma">
                   Nenhumas das anteriores
                 </option>

@@ -1,19 +1,10 @@
 <?php
-    require __DIR__ . "/config.php";
-    include __DIR__ . "/functions.php";
+    session_start();
     
-    if(!isset($_SESSION))
-    {
-        session_start();
-    }
-    
-    if(!isset($_SESSION['companie']))
+    if (!isset($_SESSION['companie']))
     {
         die("Acesso negado! <a href=\"loginCompanies.php\">Conecte-se aqui!<a>");
     }
-
-    $sqlQuery = "SELECT id, companieName, img FROM users";
-    $allCompanies = $mysqli->query($sqlQuery);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -34,12 +25,10 @@
                     <img id="logo" src="../img/comunitlogo.png" alt="communitIcon">
                 </a>
             </div>
-            <img src="../img/burguer.svg">
             <a href="#">
             <img src="../img/burguer.svg">
             </a>
-        
-            <a href="logout.php">
+            <a href="logout.php?logoutId=<?= $_SESSION['companie'] ?>">
                 Desconectar-se
             </a>
         </header>
@@ -48,15 +37,7 @@
                 Empresa/Setores Online
             </h1>
             <div id="cards">
-                <?php
-                    foreach($allCompanies as $info)
-                    {
-                        $name = $info["companieName"];
-                        $link = $info["img"];
 
-                        interprises($name, $link);
-                    }
-                ?>
             </div>
         </section>
         <footer>
@@ -65,5 +46,6 @@
                 </p>
         </footer>
     </main>
+    <script src="./js/showCompanies.js"></script>
 </body>
 </html>

@@ -23,12 +23,12 @@
                 </div>
                 <div id="formebutt">
                     <div class="inputBox">
-                        <input type="text" name="code" id="code" required="required">
+                        <input type="text" name="loginCode" id="code" required>
                         <label for="code">
                             Código:
                         </label>
                         <p>
-                            É um usúario administrador? <a href="loginAdm.php">Acesse aqui!</a>
+                            É um usúario administrador? <a href="./loginAdm.php">Acesse aqui!</a>
                         </p>
                     </div>
                     <div>

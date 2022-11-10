@@ -1,5 +1,4 @@
 <?php
-    
     // Code generator for companies
     function codeGenerator($size = 20)
     {
@@ -13,21 +12,4 @@
 
         return $randomCode;
     }
-
-    // Generator cards for companies
-    function interprises($nameCompanie, $img)
-    {
-        echo "
-        <div id='card'>
-            <img src='{$img}' alt='Logo da empresa({$nameCompanie})' id='logoemp'>
-            <p id'nameemp'>
-                {$nameCompanie}
-            </p>
-            <a href='chat.php'>
-                <button type='submit' id='buttemp'>
-                    Iniciar conversa
-                </button>
-            </a>
-        </div>";
-}
 ?>

@@ -1,17 +1,14 @@
 <?php
-    require __DIR__ . "/config.php";
-    
-    if(!isset($_SESSION))
-    {
-        session_start();
-    }
+    session_start();
 
-    if(!isset($_SESSION['adm']))
+    if (!isset($_SESSION['adm']))
     {
         die("Você não está conectado. <a href=\"loginAdm.php\">Conecte-se aqui!</a>");
     }
     else
     {
+        require __DIR__ . "/config.php";
+    
         $sqlCode = "SELECT * FROM users";
         $sqlQuery = $mysqli->query($sqlCode) or die("Erro com SQL" . $mysqli->error);
     
@@ -76,7 +73,7 @@
                                 <p id='comp1'>" . $companie['2'] . "</p>
                             <h3>
                         </div>
-                            <a id='pencil' href='editCompanie.php?id=". $companie['0'] ."'>
+                            <a id='pencil' href='editCompanie.php?id=". $companie['1'] ."'>
                                 <img src='../img/editpen.png' alt='img do lápis'>
                             </a>
                         <div style='overflow-x: auto;'>
@@ -94,7 +91,7 @@
                                         CNPJ:
                                     </th>
                                     <td>
-                                        ".$companie['3']."
+                                        " . $companie['3'] . "
                                     </td>
                                 </tr>
                                 <tr>
