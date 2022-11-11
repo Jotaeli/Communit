@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="chat.css">
+    <link rel="stylesheet" type="text/css" href="../css/chat.css">
     <title>Comunit</title>
 </head>
 <body>
-    <div id="chat">
+    <main>
         <header class="head">
-            <img src="">
-            <p>Trocabyte</p>
+            <a href=""><img src="../img/goback.png" id="go-back"></a>
+            <img src="../img/trocab.png" id="h-img">
+            <p id="title-emp">Trocabyte</p>
         </header>
         <section class="message">
-            <div class="msg">
-
+            <div class="msgSend">
+                <p class="pmsg">Olá! Gostaria de um serviço no meu celular</p>
+            </div>
+            <div class="msgRec">
+                <p class="pmsg">Bom dia, como podemos ajudar?</p>
             </div>
         </section>
-        <section class="send">
-            <form action="" method="POST">
-                <input type="text" name="outgoingId" value="<?= $_SESSION['companie']; ?>">
-                <input type="text" name="outgoingId" value="<?= $userId; ?>">
-                <input type="text" name="outgoingId" name="messages" placeholder="insira sua mensagem aqui...">
-                <button><img src="../img/seta.png" alt="" id="arrow"></button>
-            </form>
-        </section>
-    </div>
+        <form action="" method="POST" class="typingArea">
+            <input type="text" name="outgoingId" value="<?= $_SESSION['companie']; ?>" hidden>
+            <input type="text" name="outgoingId" value="<?= $userId; ?>" hidden>
+            <input type="text" name="outgoingId" name="messages" placeholder="Insira sua mensagem aqui..." id="input-send">
+            <button id="arrow"><img src="../img/seta1.png" id="arrow-img"></button>
+        </form>
+    </main>    
 </body>
 </html>
