@@ -19,5 +19,7 @@
 
         $sqlCode = "INSERT INTO adm (uniqueId, userName, userPass) VALUES ('$randomId', '$userName', '{$passCrypt}')";
         $sqlQuery = $mysqli->query($sqlCode) or die("Erro no código SQL" . $mysqli->error);
+
+        header("Location: admPage.php");
     }
 ?>

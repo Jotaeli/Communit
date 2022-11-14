@@ -36,7 +36,7 @@
             {
               $quantity = $sqlQuery->num_rows;
               
-              if($quantity === 1)
+              if ($quantity === 1)
               {
                 $_SESSION['adm'] = $adm['uniqueId'];
                 
