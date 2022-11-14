@@ -32,22 +32,11 @@
           {
             $adm = $sqlQuery->fetch_assoc();
     
-            if($adm['userPass'] == $userPass)
+            if (password_verify($userPass, $adm['userPass']))
             {
               $quantity = $sqlQuery->num_rows;
               
-              if($quantity == 1)
-              {
-                $_SESSION['adm'] = $adm['uniqueId'];
-                
-                header("Location: admPage.php");
-              }
-            }
-            else if (password_verify($adm['userPass'], $userPass))
-            {
-              $quantity = $sqlQuery->num_rows;
-              
-              if($quantity == 1)
+              if($quantity === 1)
               {
                 $_SESSION['adm'] = $adm['uniqueId'];
                 
