@@ -1,10 +1,5 @@
 <?php
-    require_once __DIR__ . "/config.php";
-
-    if(!isset($_SESSION))
-    {
-        session_start();
-    }
+    session_start();
 
     if(!isset($_SESSION['adm']))
     {
@@ -14,7 +9,9 @@
     {
         if($_GET['id'] != "" && $_GET['id'] != 0)
         {
-            $sqlCode = "SELECT * FROM users WHERE id = '{$_GET['id']}'";
+            require_once __DIR__ . "/config.php";
+
+            $sqlCode = "SELECT * FROM users WHERE uniqueId = '{$_GET['id']}'";
             $sqlQuery = $mysqli->query($sqlCode) or die("Ocorreu um erro com o SQL" . $mysqli->error);
 
             $selectedCompanie = $sqlQuery->fetch_array();
@@ -35,7 +32,8 @@
                 if (empty($_FILES['img']['name']))
                 {
                     $sqlCode = "UPDATE users SET companieName = '{$_POST['companieName']}', cnpj = '{$_POST['cnpj']}',
-                    atuationArea = '{$_POST['atuationArea']}', localization = '{$_POST['localization']}', img = '{$selectedCompanie['img']}' WHERE id = {$_GET['id']}";
+                    atuationArea = '{$_POST['atuationArea']}', localization = '{$_POST['localization']}', img = '{$selectedCompanie['img']}'
+                     WHERE uniqueId = {$_GET['id']}";
                     $sqlQuery = $mysqli->query($sqlCode) or die("Erro no código SQL" . $mysqli->error);
                 }
                 else 
@@ -59,7 +57,7 @@
                     }
                     $sqlCode = "UPDATE users SET companieName = '{$_POST['companieName']}', cnpj = '{$_POST['cnpj']}',
                     atuationArea = '{$_POST['atuationArea']}', localization = '{$_POST['localization']}', img = '{$newImgLink}' 
-                    WHERE id = {$_GET['id']}";
+                    WHERE uniqueId = {$_GET['id']}";
                     $sqlQuery = $mysqli->query($sqlCode) or die("Erro no código SQL" . $mysqli->error);
                 }
                 header("Location: admPage.php");
