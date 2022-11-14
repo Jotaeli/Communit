@@ -17,7 +17,7 @@
 
         $passCrypt = password_hash($userPass, PASSWORD_DEFAULT);
 
-        $sqlCode = "INSERT INTO adm (userName, userPass, uniqueId) VALUES ('$userName', '$passCrypt', '{$randomId}')";
+        $sqlCode = "INSERT INTO adm (uniqueId, userName, userPass) VALUES ('$randomId', '$userName', '{$passCrypt}')";
         $sqlQuery = $mysqli->query($sqlCode) or die("Erro no código SQL" . $mysqli->error);
     }
 ?>
