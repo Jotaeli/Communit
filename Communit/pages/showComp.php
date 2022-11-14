@@ -20,11 +20,12 @@
             {
                 if($row['status'] === "Online")
                 {
+                    $companieName = substr($row['companieName'], 0, 10);
                     $output .= "
                     <div id='card'>
                         <img src='" . $row['img'] . "' alt='Logo da " . $row['companieName'] . "' id='logoemp'>
                         <p id'nameemp'>
-                            " . $row['companieName'] . "
+                            " . $companieName . "
                         </p>
                         <a href='chat.php?id=" . $row['uniqueId'] . "'>
                         <button type='submit' id='buttemp'>

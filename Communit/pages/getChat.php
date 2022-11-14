@@ -9,9 +9,9 @@
         $incomingId = $_POST['incomingId'];
         $output = "";
 
-        $sqlCode = "SELECT * FROM messages  LEFT JOIN users ON users.uniqueId = messages.incomingMsgId 
+        $sqlCode = "SELECT * FROM messages  LEFT JOIN users ON users.uniqueId = messages.outgoingMsgId 
         WHERE (outgoingMsgId = {$outgoingId} AND incomingMsgId = {$incomingId}) OR 
-        (outgoingMsgId = {$incomingId} AND incomingMsgId = {$outgoingId}) ORDER BY idMsg ";
+        (outgoingMsgId = {$incomingId} AND incomingMsgId = {$outgoingId}) ORDER BY idMsg";
         $sqlQuery = $mysqli->query($sqlCode) or die("");
         $quantity = $sqlQuery->num_rows;
 
@@ -22,18 +22,13 @@
                 if($info['outgoingMsgId'] === $outgoingId)
                 {
                     $output .= '<div class="msgSend">
-                                    <p>
-                                        ' . $info['msg'] . '
-                                    </p>
+                                    <p class="pmsg">' . $info['msg'] . '</p>
                                 </div>';
                 }
                 else
                 {
                     $output .= '<div class="msgRec">
-                                    <img src="' . $info['img'] . '" alt="logo da empresa inimiga">
-                                    <p>
-                                        ' . $info['msg'] . '
-                                    </p>
+                                    <p class="pmsg">' . $info['msg'] . '</p>
                                 </div>';
                 }
             }

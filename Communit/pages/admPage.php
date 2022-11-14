@@ -33,22 +33,12 @@
                 <a href="index.html">
                     <img id="logo" src="../img/comunitlogo.png" alt="communit">
                 </a>
-                <img id="burguer" src="../img/burguer.svg" alt="menu">
-                <ul>
-                    <li>
-                       menu
-                    </li>
-                    <li>
-                        <a href="newAdm.php">
-                            Cria usúario
-                        </a>
-                    </li>
-                    <li>
-                        <a href="logout.php">
-                            Desconectar-se
-                        </a>
-                    </li>
-                </ul>
+                <a href="newAdm.php">
+                    Cria usúario
+                </a>
+                <a href="logout.php">
+                    Desconectar-se
+                </a>
             </div>
         </header>
         <section>

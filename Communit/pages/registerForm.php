@@ -13,7 +13,7 @@
   <main>
     <header class="navbar">
         <a href="index.html">
-          <img id="logo" src="../img/logocomunit.png" alt="communit">
+          <img id="logo" src="../img/comunitlogo.png" alt="communit">
         </a>
     </header>
     <section class="main">
