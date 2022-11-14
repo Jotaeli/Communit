@@ -21,20 +21,12 @@ section {
     padding-top: 70px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .cardreg {
-    margin-top: -50px;
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 486px;
-    height: 655px;
+    height: 555px;
     background: #FCFCFC;
     border: 1px solid rgba(201, 201, 201, 0.5);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -47,16 +39,7 @@ form {
     margin-top: 30px;
 }
 
-#atuationArea {
-    width: 330px;
-    color: #632b4c;
-}
-
-#atAreaLabel {
-    color: #632b4c;
-}
-
-.inputBox .inputReal {
+.inputBox input {
     padding: 14px;
     width: 300px;
     margin-left: 30px;
@@ -65,29 +48,34 @@ form {
     border: 1px solid #1e1e1e69;
 }
 
+#list {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    margin-left: 43px;
+    color: #632b4c;
+    background-color: #FCFCFC;
+    top: -15%;
+    position: absolute;
+}
+
 .labeltext {
     position: absolute;
     font-family: Arial, Helvetica, sans-serif;
     color: #632b4c;
-    top: 5%;
+    top: 60%;
     left: 38px;
     transform: translateY(-60%);
     transition: all .4s ease;
-    padding: 5px;
-    background-color: #fcfcfc;
+    padding: 10px;
     pointer-events: none;
-    font-size: 13px;
+    font-size: 1em;
 }
-
-#logoADC {
-    font-family: 'Raleway', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 19px;
-    text-decoration: underline;
+input:valid + .labeltext,
+input:focus + .labeltext{
+    font-size: 13px;
+    top: 0;
+    background-color: #FCFCFC;
+    padding: 5px;
 }
 
 #textemp {
@@ -98,7 +86,7 @@ form {
 }
 
 #cadastrar {
-    margin-top: 13px;
+    margin-top: 23px;
     cursor: pointer;
     width: 180px;
     height: 45px;
