@@ -1,5 +1,10 @@
 <?php
-    session_start();
+    require_once __DIR__ . "/config.php";
+
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
 
     if(!isset($_SESSION['adm']))
     {
@@ -9,9 +14,7 @@
     {
         if($_GET['id'] != "" && $_GET['id'] != 0)
         {
-            require_once __DIR__ . "/config.php";
-
-            $sqlCode = "SELECT * FROM users WHERE uniqueId = '{$_GET['id']}'";
+            $sqlCode = "SELECT * FROM users WHERE id = '{$_GET['id']}'";
             $sqlQuery = $mysqli->query($sqlCode) or die("Ocorreu um erro com o SQL" . $mysqli->error);
 
             $selectedCompanie = $sqlQuery->fetch_array();
@@ -32,8 +35,7 @@
                 if (empty($_FILES['img']['name']))
                 {
                     $sqlCode = "UPDATE users SET companieName = '{$_POST['companieName']}', cnpj = '{$_POST['cnpj']}',
-                    atuationArea = '{$_POST['atuationArea']}', localization = '{$_POST['localization']}', img = '{$selectedCompanie['img']}'
-                     WHERE uniqueId = {$_GET['id']}";
+                    atuationArea = '{$_POST['atuationArea']}', localization = '{$_POST['localization']}', img = '{$selectedCompanie['img']}' WHERE id = {$_GET['id']}";
                     $sqlQuery = $mysqli->query($sqlCode) or die("Erro no código SQL" . $mysqli->error);
                 }
                 else 
@@ -57,7 +59,7 @@
                     }
                     $sqlCode = "UPDATE users SET companieName = '{$_POST['companieName']}', cnpj = '{$_POST['cnpj']}',
                     atuationArea = '{$_POST['atuationArea']}', localization = '{$_POST['localization']}', img = '{$newImgLink}' 
-                    WHERE uniqueId = {$_GET['id']}";
+                    WHERE id = {$_GET['id']}";
                     $sqlQuery = $mysqli->query($sqlCode) or die("Erro no código SQL" . $mysqli->error);
                 }
                 header("Location: admPage.php");
@@ -75,7 +77,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/editemp.css">
+    <link rel="stylesheet" type="text/css" href="../css/editCompanies.css">
     <title>Edição de Empresas</title>
 </head>
 <body>
@@ -88,35 +90,35 @@
                 </h1>
                 <form action="?id=<?= $_GET['id']?>" method="POST" enctype="multipart/form-data">
                     <div class="inputBox">
+                        <input type="text" name="companieName" id="companieName" value="<?= $selectedCompanie['companieName']; ?>">
                         <label for="companieName">
-                            <!-- Nome da empresa: -->
+                            Nome da empresa:
                         </label>
-                        <input type="text" name="companieName" id="companieName" value="<?= $selectedCompanie['companieName']; ?>"><br>
                     </div>
                     <div class="inputBox">
+                        <input type="text" name="cnpj" id="cnpj" value="<?= $selectedCompanie['cnpj']; ?>">
                         <label for="cnpj">
-                            <!-- CNPJ: -->
+                            CNPJ:
                         </label>
-                        <input type="text" name="cnpj" id="cnpj" value="<?= $selectedCompanie['cnpj']; ?>"><br>
                     </div>
                     <div class="inputBox">
+                        <input type="text" name="atuationArea" id="atuationArea" value="<?= $selectedCompanie['atuationArea']; ?>">
                         <label for="atuationArea">
-                            <!-- Área de atuação: -->
+                            Área de atuação:
                         </label>
-                        <input type="text" name="atuationArea" id="atuationArea" value="<?= $selectedCompanie['atuationArea']; ?>"><br>
                     </div>
                     <div class="inputBox">
+                        <input type="text" name="localization" id="localization" value="<?= $selectedCompanie['localization']; ?>">
                         <label for="localization">
-                            <!-- Localização: -->
+                            Localização:
                         </label>
-                        <input type="text" name="localization" id="localization" value="<?= $selectedCompanie['localization']; ?>"><br>
                     </div>
-                    <label for="img">
-                        Imagem atual:
-                    </label>
-                    <div class="inputBox">
-                        <img src="<?= $selectedCompanie['img']; ?>" alt="Logo atual">
-                        <input type="file" name="img" id="img"><br>
+                    <div id="divImg">
+                        <label id="imgLab" for="img">
+                            Imagem atual:
+                        </label>
+                        <img src="<?= $selectedCompanie['img']; ?>" alt="Logo atual" id="imgNow"><br>
+                        <input type="file" name="img" id="imgFile"><br>
                     </div>
                     <button id="edit" type="submit" name="submit" value="submit">
                         Editar
