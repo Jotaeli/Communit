@@ -17,13 +17,13 @@ body {
     font-size: 100%;
     overflow-x: hidden;
     background-image: url(../img/bgprp.svg);
-    background-position: cover;
-    background-size: 200vh;
+    background-size: cover;
+    background-size: 210vh;
     background-repeat: no-repeat;
 }
 
 #bg {
-    background-image: url('bgprp.svg');
+    background-image: url('../img/bgprp.svg');
     background-position: right top;
 }
 
