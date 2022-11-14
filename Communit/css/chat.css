@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+/*font-family: 'Raleway', sans-serif;*/
+/*font-family: 'Poppins', sans-serif;*/
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 500px;
+    height: 600px;
+    border-radius: 20px;
+    background-color: rgb(248, 248, 248);
+    border: 7px solid #dcdcdc;
+}
+
+header {
+    background-color: rgb(235, 235, 235);
+    width: 500px;
+    height: 60px;
+    border-radius: 14px 14px 0px 0px;
+    display: flex;
+    align-items: center;
+}   
+
+#go-back {
+    width: 30px;
+    height: 30px;
+    margin-top: 4px;
+    margin-left: 13px;
+}
+
+#h-img {
+    position: relative;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(255, 0, 0);
+    margin-left: 10px;
+}
+
+#title-emp {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    margin-left: 3px;
+}
+
+.message {
+    width: 500px;
+    height: 480px;
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-family: 'Poppins', sans-serif;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    background-color: #dcdcdc00;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(194, 194, 194, 0.252);
+    border-radius: 10px;
+}
+
+.msgSend {
+    align-self: flex-end;
+    margin: 10px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: rgb(218, 145, 255);
+}
+
+.msgRec {
+    align-self: flex-start;
+    margin: 10px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: rgb(158, 176, 255);
+}
+
+.pmsg {
+    font-size: 12px;
+    margin: 12px 0px;
+}
+
+.typingArea {
+    background-color: rgb(235, 235, 235);
+    width: 500px;
+    height: 60px;
+    border-radius: 0px 0px 14px 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input-send {
+    position: relative;
+    border-radius: 10px;
+    width: 300px;
+    height: 20px;
+}
+
+#arrow {
+    position: relative;
+    background-color: #dcdcdc00;
+    border: 0px;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+}
+
+#arrow-img {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+    padding: 0;
+}
+
+#arrow-img:hover {
+    width: 33px;
+    height: 33px;
+}

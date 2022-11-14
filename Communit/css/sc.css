@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+/*font-family: 'Raleway', sans-serif;*/
+/*font-family: 'Roboto', sans-serif;*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+#logout {
+    border-radius: 5px;
+    background-color: #3c383800;
+    border: 1px solid #3C3838;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#logo {
+    height: 60px;
+}
+
+h1 {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #603567;
+    font-size: 60px;
+}
+
+#cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin-top: 100px;
+}
+
+#card {
+    font-family: 'Montserrat', sans-serif;
+    color: #3C3838;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 220px;
+    max-height: 280px;
+    width: 220px;
+    height: 280px;
+    gap: 26px;
+    left: 575px;
+    top: 483px;
+    background: linear-gradient(149.87deg, rgba(162, 162, 162, 0.67) 3.83%, rgba(255, 255, 255, 0.22) 94.43%);
+    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    border-radius: 30px;
+}
+
+#logoemp {
+    width: 180px;
+    height: 260px;
+    border-radius: 5%;
+    margin-top: -14px;
+}
+
+#buttemp {
+    width: 133px;
+    height: 35px;
+    left: 155px;
+    top: 745px;
+    background: linear-gradient(93.19deg, rgba(94, 51, 245, 0.88) 0%, rgba(10, 0, 46, 0.748) 100%);
+    backdrop-filter: blur(2px);
+    border-radius: 8px;
+    border: #3c383800;
+    color: white;
+    font-size: 15px;
+}
