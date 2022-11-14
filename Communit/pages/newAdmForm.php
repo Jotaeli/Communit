@@ -19,16 +19,16 @@
                 </h1>
                 <form action="" method="POST">
                     <div class="blabla">
+                        <input type="text" name="userName" id="userName" required>
                         <label for="userName">
                             Nome do usúario:
                         </label>
-                        <input type="text" name="userName" id="userName" required>
                     </div class="blabla">
                     <div class="blabla">
+                        <input type="password" name="userPass" id="userPass" required>
                         <label for="userPass">
                             Senha:
                         </label>
-                        <input type="password" name="userPass" id="userPass" required>
                     </div>
                     <div class="blabla">
                         <button type="submit" id="buttna">
