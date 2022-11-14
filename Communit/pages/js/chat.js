@@ -1,7 +1,7 @@
 const form = document.querySelector(".typingArea"),
 inputMsg = form.querySelector(".inputMsg"),
-sendBtn = form.querySelector("button"),
-chatBox = document.querySelector("#chat");
+sendBtn = form.querySelector("#arrow"),
+chatBox = document.querySelector(".messages");
 
 form.onsubmit = (e)=>{
     e.preventDefault();
