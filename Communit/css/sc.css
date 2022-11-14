@@ -57,8 +57,10 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 260px;
+    max-width: 220px;
+    max-height: 280px;
+    width: 220px;
+    height: 280px;
     gap: 26px;
     left: 575px;
     top: 483px;
@@ -69,8 +71,8 @@ h1 {
 }
 
 #logoemp {
-    max-width: 160px;
-    max-height: 120px;
+    width: 180px;
+    height: 260px;
     border-radius: 5%;
     margin-top: -14px;
 }
