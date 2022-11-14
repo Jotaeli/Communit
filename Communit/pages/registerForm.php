@@ -23,50 +23,46 @@
         </h1>
         <form name="post" action="?post=true" method="POST" enctype="multipart/form-data">
             <div class="inputBox">
-              <input type="text" name="companieName" id="companieName" required>
+              <input class="inputReal" type="text" name="companieName" id="companieName" required>
               <label for="companieName" class="labeltext">
                 Nome da empresa:
               </label>
             </div>
             <div class="inputBox">
-              <label for="atuationArea" id="list">
-                Área de atuação:
-              </label>
-              <select name="atuationArea" id="atuationArea">
-                <option value="Programação">
-                  Programação
-                </option>
+              <select class="inputReal" name="atuationArea" id="atuationArea">
+                <option value="Nenhuma">
+                  Nenhuma
                 <option value="Nutrição">
                   Nutrição
                 </option>
                 <option value="Assistência Técnica">
                   Assistência técnica
                 </option>
-                <option value="Venda de Smartphone">
-                  Venda de smartphones
-                </option>
-                <option value="Nenhuma">
-                  Nenhumas das anteriores
+                <option value="Programação">
+                  Programação
                 </option>
               </select>
+              <label class="labeltext" for="atuationArea" id="atAreaLabel">
+                Área de atuação:
+              </label>
             </div>
             <div class="inputBox">
-              <input type="text" name="localization" id="localization">
-              <label for="localization" class="labeltext">
+              <input class="inputReal" type="text" name="localization" id="localization">
+              <label class="labeltext" for="localization">
                 Localização:
               </label>
             </div>
             <div class="inputBox">
-              <input type="text" name="cnpj" id="cnpj">
-              <label for="cnpj" class="labeltext">
+              <input class="inputReal" type="text" name="cnpj" id="cnpj">
+              <label class="labeltext" fr="cnpj">
                 CNPJ:
               </label>
             </div>
-            <div class="inputBox">
-            <label for="logo">
+            <div id="logoADC">
+              <label for="logoADD">
                 Logo da empresa:
               </label>
-              <input type="file" name="img" id="logo" required>
+              <input type="file" name="img" id="logoADD" required>
               <p>No máximo 10MB</p>
             </div>
             <div>
