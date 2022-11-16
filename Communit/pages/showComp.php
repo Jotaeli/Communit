@@ -1,7 +1,6 @@
 <?php 
     session_start();
     include_once __DIR__ . "/config.php";
-
     $outgoingId = $_SESSION['companie'];
     $sqlCode = "SELECT * FROM users WHERE NOT uniqueId = {$outgoingId}";
     $sqlQuery = $mysqli->query($sqlCode) or die();
@@ -10,11 +9,13 @@
     
         $quantity = $sqlQuery->num_rows;
         
-        if($quantity === 1)
-        {
-            $output .= "Nenhuma empresa está online!";
-        }
-        else if($quantity > 1)
+        // if($quantity === 1)
+        // {
+        //     $output .= "Nenhuma empresa está online!";
+        //     echo $output;
+        // }
+        // else 
+        if($quantity >= 1)
         {
             while($row = $sqlQuery->fetch_assoc())
             {
