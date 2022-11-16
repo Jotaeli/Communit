@@ -47,7 +47,7 @@
                 $loginCode = codeGenerator();
                 $status = "Offline";
 
-                $sqlCode = "INSERT INTO users (unique_id, companieName, cnpj, atuationArea, localization, img, status, loginCode) 
+                $sqlCode = "INSERT INTO users (uniqueId, companieName, cnpj, atuationArea, localization, img, status, loginCode) 
                 VALUES ('$randomId', '$companieName', '$cnpj', '$atuationArea', '$localization', '$imgLink', '$status', '$loginCode')";
                 $sqlQuery = $mysqli->query($sqlCode) or die('Ocorreu um erro com o MySql' . $mysqli->error);
                 
